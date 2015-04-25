@@ -9,13 +9,8 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
-import com.opencsv.CSVReader;
 
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.StringReader;
-import java.util.ArrayList;
-import java.util.List;
 
 public class MapsActivity extends FragmentActivity {
     private GoogleMap mMap; // Might be null if Google Play services APK is not available.
@@ -31,7 +26,7 @@ public class MapsActivity extends FragmentActivity {
         try {
             AssetManager assetManager = getAssets();
             instance.ptsInterest = new FoodParser().getPointOfInterest(assetManager.open("restaurants.json"));
-            instance.bikeRoads = new RoadParser().getRoads(assetManager.open("pistecyclable.csv"));
+            instance.bikeRoads = new BikeRoadParser().getRoads(assetManager.open("pistecyclable.csv"));
 
         } catch (IOException e) {
             e.printStackTrace();

@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import com.example.raphael.hacksherbrooke.parsers.BikeRoad;
 
 import java.util.ArrayList;
 

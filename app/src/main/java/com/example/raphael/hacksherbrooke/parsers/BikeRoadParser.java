@@ -7,9 +7,10 @@ import java.io.InputStreamReader;
 import java.io.StringReader;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
-public class RoadParser {
-    public List<BikeRoad> getRoads(InputStream stream) throws IOException {
+public class BikeRoadParser {
+    public List<BikeRoad> getRoads(InputStream stream, double coeff) throws IOException {
 
         List<BikeRoad> liste = new ArrayList<>();
 
@@ -36,12 +37,15 @@ public class RoadParser {
                 road.sensorUsed = nextLine[10];
                 road.lenght = Double.parseDouble(nextLine[11].replace(',','.'));
 
+                double altitude = 229.12819690817125;
                 String[] coord;
                 List<Coordinate> coords = new ArrayList<>();
+                Random randomGenerator = new Random();
                 while ((coord = stringReader.readNext()) != null) {
                     for(int i = 0; i < coord.length; ++i, ++i) {
                         String[] parts = coord[i].split(" ");
-                        coords.add((new Coordinate(Double.parseDouble(parts[0]), Double.parseDouble(parts[1]))));
+                        coords.add((new Coordinate(Double.parseDouble(parts[0]), Double.parseDouble(parts[1]), altitude)));
+                        altitude = coeff * randomGenerator.nextGaussian() * 54.6 * 0.1 + altitude;
                     }
                 }
                 road.geometry = coords;
