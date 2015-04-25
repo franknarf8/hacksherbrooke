@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Random;
 
 public class BikeRoadParser {
-    public List<BikeRoad> getRoads(InputStream stream, double coeff) throws IOException {
+    public List<BikeRoad> getRoads(InputStream stream) throws IOException {
 
         List<BikeRoad> liste = new ArrayList<>();
 
@@ -42,6 +42,7 @@ public class BikeRoadParser {
                 List<Coordinate> coords = new ArrayList<>();
                 Random randomGenerator = new Random();
                 while ((coord = stringReader.readNext()) != null) {
+                    double coeff = randomGenerator.nextDouble();
                     for(int i = 0; i < coord.length; ++i, ++i) {
                         String[] parts = coord[i].split(" ");
                         coords.add((new Coordinate(Double.parseDouble(parts[0]), Double.parseDouble(parts[1]), altitude)));
