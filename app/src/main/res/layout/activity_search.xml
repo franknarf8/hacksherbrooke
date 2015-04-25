@@ -206,7 +206,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ride type"
+        android:text="Ride Type"
         android:id="@+id/textView3"
         android:layout_alignTop="@+id/textView2"
         android:layout_alignRight="@+id/Time"
@@ -254,7 +254,7 @@
         android:layout_height="wrap_content"
         android:text="Beach"
         android:id="@+id/checkBox5"
-        android:layout_above="@+id/radioGroupRideType"
+        android:layout_below="@+id/checkBox4"
         android:layout_alignLeft="@+id/checkBox4"
         android:layout_alignStart="@+id/checkBox4" />
 
