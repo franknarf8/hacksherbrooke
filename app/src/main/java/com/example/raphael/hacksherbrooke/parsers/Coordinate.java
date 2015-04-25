@@ -1,8 +1,5 @@
-package com.example.raphael.hacksherbrooke;
+package com.example.raphael.hacksherbrooke.parsers;
 
-/**
- * Created by frank on 25/04/15.
- */
 public class Coordinate {
     public double latitude;
     public double longitude;
