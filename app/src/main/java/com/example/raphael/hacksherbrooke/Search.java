@@ -77,6 +77,13 @@ public class Search extends ActionBarActivity {
 
     }
 
+    public void Evaluate(ArrayList<BikeRoad> bikeRoadsArray){
+
+        
+
+
+    }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
