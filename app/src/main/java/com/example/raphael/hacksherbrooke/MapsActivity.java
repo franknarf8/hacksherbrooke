@@ -29,8 +29,8 @@ public class MapsActivity extends FragmentActivity {
         setUpMapIfNeeded();
     }
 
-    public List<List<Coordinate>> getRoutes(){
-        List<List<Coordinate>> liste = new ArrayList<>();
+    public List<BikeRoad> getRoutes(){
+        List<BikeRoad> liste = new ArrayList<>();
 
         CSVReader reader = null;
         try {
@@ -43,6 +43,20 @@ public class MapsActivity extends FragmentActivity {
             String[] nextLine;
             while ((nextLine = reader.readNext()) != null) {
                 CSVReader stringReader = new CSVReader(new StringReader(nextLine[12].substring(12, nextLine[12].length()-1)));
+                BikeRoad road = new BikeRoad();
+                road.id = nextLine[0];
+                road.nomVille = nextLine[1];
+                road.nomDestinationSherbrooke = nextLine[2];
+                road.nomMTQ = nextLine[3];
+                road.remarque = nextLine[4];
+                road.largeur = nextLine[5];
+                road.type = nextLine[6];
+                road.pavement = nextLine[7];
+                road.typeMTQ1 = nextLine[8];
+                road.typeMTQ2 = nextLine[9];
+                road.sensorUsed = nextLine[10];
+                road.lenght = Double.parseDouble(nextLine[11].replace(',','.'));
+
                 String[] coord;
                 List<Coordinate> coords = new ArrayList<>();
                 while ((coord = stringReader.readNext()) != null) {
@@ -51,7 +65,8 @@ public class MapsActivity extends FragmentActivity {
                         coords.add((new Coordinate(Double.parseDouble(parts[0]), Double.parseDouble(parts[1]))));
                     }
                 }
-                liste.add(coords);
+                road.geometry = coords;
+                liste.add(road);
             }
         } catch (Exception e) {
             e.printStackTrace();
