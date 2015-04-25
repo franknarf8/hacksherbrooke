@@ -1,5 +1,7 @@
 package com.example.raphael.hacksherbrooke;
 
+import android.app.Activity;
+import android.content.res.AssetManager;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 
@@ -7,6 +9,14 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.opencsv.CSVReader;
+
+import java.io.FileReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.StringReader;
+import java.util.ArrayList;
+import java.util.List;
 
 public class MapsActivity extends FragmentActivity {
 
@@ -19,10 +29,43 @@ public class MapsActivity extends FragmentActivity {
         setUpMapIfNeeded();
     }
 
+    public List<List<Coordinate>> getRoutes(){
+        List<List<Coordinate>> liste = new ArrayList<>();
+
+        CSVReader reader = null;
+        try {
+            AssetManager assetManager = getAssets();
+            InputStreamReader inputStream = new InputStreamReader(assetManager.open("pistecyclable.csv"));
+
+            reader = new CSVReader(inputStream, '|');
+
+            reader.readNext();
+            String[] nextLine;
+            while ((nextLine = reader.readNext()) != null) {
+                CSVReader stringReader = new CSVReader(new StringReader(nextLine[12].substring(12, nextLine[12].length()-1)));
+                String[] coord;
+                List<Coordinate> coords = new ArrayList<>();
+                while ((coord = stringReader.readNext()) != null) {
+                    for(int i = 0; i < coord.length; ++i, ++i) {
+                        String[] parts = coord[i].split(" ");
+                        coords.add((new Coordinate(Double.parseDouble(parts[0]), Double.parseDouble(parts[1]))));
+                    }
+                }
+                liste.add(coords);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return liste;
+    }
+
     @Override
     protected void onResume() {
         super.onResume();
         setUpMapIfNeeded();
+
+        getRoutes();
     }
 
     /**
