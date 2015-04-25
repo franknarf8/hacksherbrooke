@@ -6,4 +6,314 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="com.example.raphael.hacksherbrooke.Search">
 
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Terrain"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="21dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="27dp" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioGroupTerrain"
+        android:layout_alignParentTop="true">
+
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Paved"
+            android:id="@+id/radioButtonPaved"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="65dp" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rocky"
+            android:id="@+id/radioButtonRocky"
+            android:layout_below="@+id/radioButtonPaved"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Extreme"
+            android:id="@+id/radioButtonExtreme"
+            android:layout_below="@+id/radioButtonRocky"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+
+
+
+        </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time"
+        android:id="@+id/Time"
+        android:layout_alignBottom="@+id/textView"
+        android:layout_centerHorizontal="true" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioGroupTime"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/Time">
+
+        <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="30 to 45 min"
+        android:id="@+id/radioButtonTime1"
+        android:layout_below="@+id/Time"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="23dp" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1h to 1h30 "
+            android:id="@+id/radioButtonTime2"
+            android:layout_below="@+id/radioButtonTime1"
+            android:layout_centerHorizontal="true" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2h to 2h30"
+            android:id="@+id/radioButtonTime3"
+            android:layout_below="@+id/radioButtonTime2"
+            android:layout_centerHorizontal="true" />
+
+        <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Whole afternoon"
+        android:id="@+id/radioButtonTime4"
+        android:layout_below="@+id/radioButtonTime3"
+        android:layout_centerHorizontal="true" />
+
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="39dp"
+        android:text="Denivelation"
+        android:id="@+id/textView2"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioGroupDenivelation"
+        android:layout_below="@+id/radioGroupTime"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="50dp">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Flat"
+            android:id="@+id/radioButtonDenivelation1"
+            android:layout_below="@+id/textView2"
+            android:layout_alignLeft="@+id/textView2"
+            android:layout_alignStart="@+id/textView2" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hills"
+            android:id="@+id/radioButtonDenevilation2"
+            android:layout_below="@+id/radioButtonDenivelation1"
+            android:layout_alignRight="@+id/radioButtonDenivelation1"
+            android:layout_alignEnd="@+id/radioButtonDenivelation1" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Big Hills"
+            android:id="@+id/radioButtonDenivelation3"
+            android:layout_below="@+id/radioButtonDenevilation2"
+            android:layout_alignRight="@+id/radioButtonDenevilation2"
+            android:layout_alignEnd="@+id/radioButtonDenevilation2" />
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioGroupRideType"
+        android:layout_alignTop="@+id/radioGroupDenivelation"
+        android:layout_alignLeft="@+id/radioGroupTime"
+        android:layout_alignStart="@+id/radioGroupTime">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Road Bike"
+            android:id="@+id/radioButtonRideType1"
+            android:layout_below="@+id/textView4"
+            android:layout_alignLeft="@+id/textView4"
+            android:layout_alignStart="@+id/textView4" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mountain Bike"
+            android:id="@+id/radioButtonRideType2"
+            android:layout_below="@+id/radioButtonRideType1"
+            android:layout_alignRight="@+id/radioButtonRideType1"
+            android:layout_alignEnd="@+id/radioButtonRideType1" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kick Scooter"
+            android:id="@+id/radioButtonRideType3"
+            android:layout_below="@+id/radioButtonRideType2"
+            android:layout_alignRight="@+id/radioButtonRideType2"
+            android:layout_alignEnd="@+id/radioButtonRideType2" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rollerblades"
+            android:id="@+id/radioButtonRideType"
+            android:layout_below="@+id/radioGroupRideType"
+            android:layout_alignLeft="@+id/radioGroupRideType"
+            android:layout_alignStart="@+id/radioGroupRideType" />
+
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ride type"
+        android:id="@+id/textView3"
+        android:layout_alignTop="@+id/textView2"
+        android:layout_alignRight="@+id/Time"
+        android:layout_alignEnd="@+id/Time" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Parcs"
+        android:id="@+id/checkBox1"
+        android:layout_alignTop="@+id/radioGroupTime"
+        android:layout_toRightOf="@+id/radioGroupTime"
+        android:layout_toEndOf="@+id/radioGroupTime"
+        android:layout_marginTop="33dp" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Restaurants"
+        android:id="@+id/checkBox2"
+        android:layout_below="@+id/checkBox1"
+        android:layout_toRightOf="@+id/radioGroupTime"
+        android:layout_toEndOf="@+id/radioGroupTime" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fishing"
+        android:id="@+id/checkBox3"
+        android:layout_below="@+id/checkBox2"
+        android:layout_alignLeft="@+id/checkBox2"
+        android:layout_alignStart="@+id/checkBox2" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bus line"
+        android:id="@+id/checkBox4"
+        android:layout_below="@+id/checkBox3"
+        android:layout_alignLeft="@+id/checkBox3"
+        android:layout_alignStart="@+id/checkBox3" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Beach"
+        android:id="@+id/checkBox5"
+        android:layout_above="@+id/radioGroupRideType"
+        android:layout_alignLeft="@+id/checkBox4"
+        android:layout_alignStart="@+id/checkBox4" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pool"
+        android:id="@+id/checkBox6"
+        android:layout_below="@+id/checkBox5"
+        android:layout_alignLeft="@+id/checkBox5"
+        android:layout_alignStart="@+id/checkBox5" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Parking velo"
+        android:id="@+id/checkBox7"
+        android:layout_below="@+id/checkBox6"
+        android:layout_alignLeft="@+id/checkBox6"
+        android:layout_alignStart="@+id/checkBox6" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Park Bench"
+        android:id="@+id/checkBox8"
+        android:layout_below="@+id/checkBox7"
+        android:layout_alignLeft="@+id/checkBox7"
+        android:layout_alignStart="@+id/checkBox7" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wifi"
+        android:id="@+id/checkBox9"
+        android:layout_below="@+id/checkBox8"
+        android:layout_alignLeft="@+id/checkBox8"
+        android:layout_alignStart="@+id/checkBox8" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Interests"
+        android:id="@+id/textView4"
+        android:layout_above="@+id/checkBox1"
+        android:layout_alignLeft="@+id/checkBox1"
+        android:layout_alignStart="@+id/checkBox1" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:id="@+id/Submit"
+        android:layout_below="@+id/checkBox9"
+        android:layout_marginTop="30dp"
+        android:layout_alignRight="@+id/checkBox8"
+        android:layout_alignEnd="@+id/checkBox8"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
 </RelativeLayout>
