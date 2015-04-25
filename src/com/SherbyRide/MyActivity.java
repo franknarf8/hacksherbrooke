@@ -12,6 +12,7 @@ public class MyActivity extends Activity {
 
     private View.OnClickListener droidTapListener;
 
+    int counter = 0;
 
     private void InitializeApp()
     {
@@ -22,6 +23,8 @@ public class MyActivity extends Activity {
         droidTapListener = new View.OnClickListener()  {
             public void onClick(View v) {
                 //TapDroid();
+                ++counter;
+                message.setText(counter);
             }
         };
         droid.setOnClickListener(droidTapListener);
