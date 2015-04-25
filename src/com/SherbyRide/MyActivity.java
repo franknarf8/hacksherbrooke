@@ -24,10 +24,10 @@ public class MyActivity extends Activity {
             public void onClick(View v) {
                 //TapDroid();
                 ++counter;
-                message.setText(counter);
+                message.setText(new Integer(counter).toString());
             }
         };
-        droid.setOnClickListener(droidTapListener);
+        message.setOnClickListener(droidTapListener);
     }
 
     /**
