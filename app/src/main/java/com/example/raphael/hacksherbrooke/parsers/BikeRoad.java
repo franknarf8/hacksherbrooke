@@ -1,10 +1,7 @@
-package com.example.raphael.hacksherbrooke;
+package com.example.raphael.hacksherbrooke.parsers;
 
 import java.util.List;
 
-/**
- * Created by frank on 25/04/15.
- */
 public class BikeRoad {
     public String id;
     public String nomVille;
