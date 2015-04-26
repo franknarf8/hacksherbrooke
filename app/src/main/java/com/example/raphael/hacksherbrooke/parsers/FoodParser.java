@@ -38,11 +38,15 @@ public class FoodParser implements PointOfInterestParser {
                 poi.phone = obj.getString("NumeroTelephone");
                 poi.description = obj.getString("DescriptionCourte");
                 poi.image = obj.getString("FichierImage");
-                poi.type = PointOfInterest.Type.FOOD;
+
+                String lowerName = poi.name.toLowerCase();
+                String lowerDesc = poi.name.toLowerCase();
+                if (lowerName.contains("bière") || lowerDesc.contains("bière") || lowerName.contains("bar") || lowerName.contains("brasseri") || lowerName.contains("pub") || lowerDesc.contains("bar "))
+                    poi.type = PointOfInterest.Type.BAR;
+                else
+                    poi.type = PointOfInterest.Type.FOOD;
+
                 pois.add(poi);
-
-
-
             }
         } catch (Exception e){}
 
