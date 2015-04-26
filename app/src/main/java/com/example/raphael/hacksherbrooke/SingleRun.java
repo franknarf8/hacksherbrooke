@@ -4,7 +4,8 @@ import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.util.Log;
 
-import com.example.raphael.hacksherbrooke.parsers.BikeRoad;
+import com.example.raphael.hacksherbrooke.parsers.BikeRoadParser;
+import com.example.raphael.hacksherbrooke.parsers.DataObjects.BikeRoad;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;

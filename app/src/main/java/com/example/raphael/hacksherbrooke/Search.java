@@ -15,7 +15,7 @@ import android.widget.CheckBox;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
-import com.example.raphael.hacksherbrooke.parsers.BikeRoad;
+import com.example.raphael.hacksherbrooke.parsers.DataObjects.BikeRoad;
 import com.example.raphael.hacksherbrooke.parsers.BikeRoadParser;
 import com.example.raphael.hacksherbrooke.parsers.FoodParser;
 import com.example.raphael.hacksherbrooke.parsers.SingletonDatabase;
