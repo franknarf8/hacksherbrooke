@@ -115,9 +115,7 @@
         android:layout_height="39dp"
         android:text="Denivelation"
         android:id="@+id/textView2"
-        android:layout_centerVertical="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_below="@+id/radioGroupTime"/>
 
     <RadioGroup
         android:layout_width="wrap_content"
@@ -132,10 +130,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Flat"
-            android:id="@+id/radioButtonDenivelation1"
-            android:layout_below="@+id/textView2"
-            android:layout_alignLeft="@+id/textView2"
-            android:layout_alignStart="@+id/textView2" />
+            android:id="@+id/radioButtonDenivelation1" />
 
         <RadioButton
             android:layout_width="wrap_content"
@@ -249,17 +244,14 @@
         android:layout_alignStart="@+id/checkBox1" />
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Submit"
+        android:textSize="50dp"
         android:id="@+id/Submit"
-        android:layout_below="@+id/checkBox9"
-        android:layout_marginTop="30dp"
-        android:layout_alignRight="@+id/checkBox8"
-        android:layout_alignEnd="@+id/checkBox8"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:onClick="ButtonOnButtonClick" />
+        android:textAllCaps="false"
+        android:onClick="ButtonOnButtonClick" android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true" android:layout_alignParentStart="true"/>
 
 
 </RelativeLayout>
