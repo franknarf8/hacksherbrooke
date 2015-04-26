@@ -8,4 +8,5 @@
     <string name="title_activity_search">Search</string>
     <string name="title_activity_single_run">singleRunMap</string>
     <string name="title_activity_small_map">SmallMap</string>
+    <string name="title_activity_intro">Intro</string>
 </resources>

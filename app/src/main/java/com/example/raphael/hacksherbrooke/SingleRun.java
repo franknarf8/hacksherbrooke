@@ -175,6 +175,13 @@ public class SingleRun extends FragmentActivity {
                             .icon(BitmapDescriptorFactory.fromResource(R.drawable.tree)));
                     break;
                 }
+                case WIFI: {
+                    mMap.addMarker(new MarkerOptions()
+                            .position(new LatLng(point.location.latitude, point.location.longitude))
+                            .title(point.name)
+                            .icon(BitmapDescriptorFactory.fromResource(R.drawable.tree)));
+                    break;
+                }
                 default: {
                     mMap.addMarker(new MarkerOptions()
                             .position(new LatLng(point.location.latitude, point.location.longitude))

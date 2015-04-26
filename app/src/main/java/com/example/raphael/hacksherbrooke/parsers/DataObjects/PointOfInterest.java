@@ -5,7 +5,7 @@ import com.example.raphael.hacksherbrooke.parsers.Coordinate;
 import java.io.Serializable;
 
 public class PointOfInterest implements Serializable{
-    public enum Type { FOOD, EVENT, ACTIVITY, POOL, MAGASIN, PARK, BAR, UNKNOWN }
+    public enum Type { FOOD, EVENT, ACTIVITY, POOL, MAGASIN, PARK, BAR, UNKNOWN, WIFI }
     public Type type;
     public String name;
     public String phone;
