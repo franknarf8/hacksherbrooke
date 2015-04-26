@@ -3,13 +3,6 @@ package com.example.raphael.hacksherbrooke;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.res.AssetManager;
-<<<<<<< HEAD
-import android.os.Debug;
-import android.util.Log;
-import android.provider.MediaStore;
-=======
-import android.support.v7.app.ActionBarActivity;
->>>>>>> bc895ca5797a3c4c61ba49ab1831d5e072574697
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
