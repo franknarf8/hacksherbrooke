@@ -23,6 +23,8 @@ import com.example.raphael.hacksherbrooke.parsers.FoodParser;
 import com.example.raphael.hacksherbrooke.parsers.SingletonDatabase;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.io.Serializable;
 import java.util.*;
 
@@ -174,7 +176,8 @@ public class Search extends ActionBarActivity {
 
         step = possiblePaths.size()/3;
         possiblePaths = new ArrayList<>(possiblePaths.subList(multiplier * step, multiplier * step + step));
-
+        
+        nextMove.putExtra("Points", (ArrayList<PointOfInterest>) points);
         nextMove.putExtra("Coordinate", possiblePaths);
         startActivity(nextMove);
 
