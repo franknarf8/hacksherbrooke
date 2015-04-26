@@ -1,19 +1,12 @@
 package com.example.raphael.hacksherbrooke;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.AttributeSet;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.CheckBox;
 
 import com.example.raphael.hacksherbrooke.parsers.DataObjects.Profile;
-
-import java.util.ArrayList;
-import java.util.List;
-
 
 public class MainActivity extends Activity {
 
