@@ -1,16 +1,19 @@
 package com.example.raphael.hacksherbrooke;
 
+import android.graphics.Camera;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.util.Log;
 
 import com.example.raphael.hacksherbrooke.parsers.BikeRoadParser;
+import com.example.raphael.hacksherbrooke.parsers.Coordinate;
 import com.example.raphael.hacksherbrooke.parsers.DataObjects.BikeRoad;
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.PolylineOptions;
 
@@ -66,6 +69,23 @@ public class SingleRun extends FragmentActivity {
         }
     }
 
+    public LatLngBounds getBounds() {
+
+        Coordinate coord = this.paths.get(0).geometry.get(0);
+        Coordinate min = new Coordinate(coord);
+        Coordinate max = new Coordinate(coord);
+        for (int i = 0; i != paths.size(); ++i) {
+            for(int j =0; j != paths.get(i).geometry.size(); ++j){
+                coord = new Coordinate(paths.get(i).geometry.get(j));
+                min.latitude = Math.min(min.latitude, coord.latitude);
+                min.longitude = Math.min(min.longitude, coord.longitude);
+                max.latitude = Math.max(max.latitude, coord.latitude);
+                max.longitude = Math.max(max.longitude, coord.longitude);
+            }
+        }
+        return new LatLngBounds(new LatLng(min.longitude, min.latitude), new LatLng(max.longitude, max.latitude));
+    }
+
     /**
      * This is where we can add markers or lines, add listeners or move the camera. In this case, we
      * just add a marker near Africa.
@@ -76,22 +96,27 @@ public class SingleRun extends FragmentActivity {
 
         ArrayList<PolylineOptions> line = new ArrayList<>();
 
-        for(int i = 0 ; i< paths.size(); i++){
+        for(int i = 0 ; i != paths.size(); i++){
 
             PolylineOptions temp = new PolylineOptions();
 
-            for(int k = 0 ; k < paths.get(i).geometry.size();k++){
+            for(int k = 0 ; k != paths.get(i).geometry.size();k++){
 
                 temp.add(new LatLng(paths.get(i).geometry.get(k).longitude, paths.get(i).geometry.get(k).latitude));
+                /*mMap.addMarker(new MarkerOptions()
+                        .position(temp.getPoints().get(temp.getPoints().size()-1))
+                        .title("Hello world"));*/
 
             }
 
             line.add(temp);
         }
 
+
         for(int l = 0 ; l< line.size(); l++){
 
             mMap.addPolyline(line.get(l));
+            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(getBounds().getCenter(), 11));
 
         }
 

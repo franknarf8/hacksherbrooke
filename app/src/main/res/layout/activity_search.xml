@@ -157,61 +157,6 @@
 
     </RadioGroup>
 
-    <RadioGroup
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/radioGroupRideType"
-        android:layout_alignTop="@+id/radioGroupDenivelation"
-        android:layout_alignLeft="@+id/radioGroupTime"
-        android:layout_alignStart="@+id/radioGroupTime">
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Road Bike"
-            android:id="@+id/radioButtonRideType1"
-            android:layout_below="@+id/textView4"
-            android:layout_alignLeft="@+id/textView4"
-            android:layout_alignStart="@+id/textView4" />
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Mountain Bike"
-            android:id="@+id/radioButtonRideType2"
-            android:layout_below="@+id/radioButtonRideType1"
-            android:layout_alignRight="@+id/radioButtonRideType1"
-            android:layout_alignEnd="@+id/radioButtonRideType1" />
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Kick Scooter"
-            android:id="@+id/radioButtonRideType3"
-            android:layout_below="@+id/radioButtonRideType2"
-            android:layout_alignRight="@+id/radioButtonRideType2"
-            android:layout_alignEnd="@+id/radioButtonRideType2" />
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Rollerblades"
-            android:id="@+id/radioButtonRideType"
-            android:layout_below="@+id/radioGroupRideType"
-            android:layout_alignLeft="@+id/radioGroupRideType"
-            android:layout_alignStart="@+id/radioGroupRideType" />
-
-    </RadioGroup>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ride Type"
-        android:id="@+id/textView3"
-        android:layout_alignTop="@+id/textView2"
-        android:layout_alignRight="@+id/Time"
-        android:layout_alignEnd="@+id/Time" />
-
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

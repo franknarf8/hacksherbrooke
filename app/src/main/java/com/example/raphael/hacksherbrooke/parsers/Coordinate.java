@@ -18,4 +18,10 @@ public class Coordinate implements Serializable{
         this.longitude = longitude;
         this.altitude = altitude;
     }
+
+    public Coordinate(Coordinate coord) {
+        this.latitude = coord.latitude;
+        this.longitude = coord.longitude;
+        this.altitude = coord.altitude;
+    }
 }

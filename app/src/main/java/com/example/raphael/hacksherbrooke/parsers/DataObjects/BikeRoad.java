@@ -19,4 +19,5 @@ public class BikeRoad implements Serializable{
     public String sensorUsed;
     public Double lenght;
     public List<Coordinate> geometry;
+    public double denivelation;
 }
