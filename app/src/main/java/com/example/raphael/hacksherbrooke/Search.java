@@ -1,5 +1,6 @@
 package com.example.raphael.hacksherbrooke;
 
+import android.provider.MediaStore;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -9,7 +10,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import com.example.raphael.hacksherbrooke.parsers.DataObjects.BikeRoad;
+import com.example.raphael.hacksherbrooke.parsers.BikeRoad;
 
 import java.util.ArrayList;
 

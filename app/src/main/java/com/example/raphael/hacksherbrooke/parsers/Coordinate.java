@@ -1,6 +1,8 @@
 package com.example.raphael.hacksherbrooke.parsers;
 
-public class Coordinate {
+import java.io.Serializable;
+
+public class Coordinate implements Serializable{
     public double latitude;
     public double longitude;
     public double altitude;

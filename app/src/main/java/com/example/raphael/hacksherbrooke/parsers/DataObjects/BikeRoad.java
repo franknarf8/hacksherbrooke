@@ -2,9 +2,10 @@ package com.example.raphael.hacksherbrooke.parsers.DataObjects;
 
 import com.example.raphael.hacksherbrooke.parsers.Coordinate;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class BikeRoad {
+public class BikeRoad implements Serializable{
     public String id;
     public String nomVille;
     public String nomDestinationSherbrooke;
