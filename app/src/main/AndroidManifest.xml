@@ -42,6 +42,10 @@
             android:name=".Search"
             android:label="@string/title_activity_search" >
         </activity>
+        <activity
+            android:name=".SingleRun"
+            android:label="@string/title_activity_single_run" >
+        </activity>
     </application>
 
 </manifest>

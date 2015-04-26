@@ -1,5 +1,6 @@
 package com.example.raphael.hacksherbrooke;
 
+import android.content.Intent;
 import android.provider.MediaStore;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -10,6 +11,9 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+
+import com.example.raphael.hacksherbrooke.parsers.BikeRoad;
+
 import java.util.ArrayList;
 
 import static java.lang.Math.abs;
@@ -149,6 +153,15 @@ public class Search extends ActionBarActivity {
 
         }
 
+        Intent nextMove = new Intent(this, SingleRun.class);
+
+        for(int g = 0; g < possiblePaths.size();g++){
+
+                nextMove.putExtra("Coordinate " + g, possiblePaths.get(g));
+
+        }
+
+        startActivity(nextMove);
 
     }
 
