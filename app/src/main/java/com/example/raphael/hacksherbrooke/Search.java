@@ -42,6 +42,7 @@ public class Search extends Activity {
             instance.bikeRoads = new BikeRoadParser().getRoads(assetManager.open("pistecyclable.csv"));
             instance.ptsInterest.addAll(new AttractionParser().getPointOfInterest(assetManager.open("attractions.json")));
             instance.ptsInterest.addAll(new WifiParser().getPointOfInterest(assetManager.open("wifi.csv")));
+            instance.districts = new DistrictParser().getDistricts(assetManager.open("chialage.json"));
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -28,8 +28,10 @@ public class WifiParser implements PointOfInterestParser {
                 poi.description = nextLine[2];
                 poi.adresse = nextLine[3] + " " + nextLine[4] + " " + nextLine[5] + " " + nextLine[8];
                 poi.phone = nextLine[9];
-                if (!nextLine[11].isEmpty() && !nextLine[12].isEmpty())
-                    poi.location = new Coordinate(Double.parseDouble(nextLine[11]), Double.parseDouble(nextLine[12]));
+                if (nextLine[11].isEmpty() || nextLine[12].isEmpty()) {
+                    int a = 2;
+                }
+                poi.location = new Coordinate(Double.parseDouble(nextLine[11]), Double.parseDouble(nextLine[12]));
 
                 liste.add(poi);
             }

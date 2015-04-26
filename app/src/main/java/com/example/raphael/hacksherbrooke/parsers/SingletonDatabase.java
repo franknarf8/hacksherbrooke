@@ -1,6 +1,7 @@
 package com.example.raphael.hacksherbrooke.parsers;
 
 import com.example.raphael.hacksherbrooke.parsers.DataObjects.BikeRoad;
+import com.example.raphael.hacksherbrooke.parsers.DataObjects.District;
 import com.example.raphael.hacksherbrooke.parsers.DataObjects.PointOfInterest;
 
 import java.util.List;
@@ -20,4 +21,5 @@ public class SingletonDatabase {
 
     public List<BikeRoad> bikeRoads;
     public List<PointOfInterest> ptsInterest;
+    public List<District> districts;
 }

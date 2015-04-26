@@ -33,10 +33,6 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/title_activity_main" >
-        </activity>
-        <activity
-            android:name=".Search"
-            android:label="@string/title_activity_search" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -44,12 +40,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SingleRun"
-            android:label="@string/title_activity_single_run" >
+            android:name=".Search"
+            android:label="@string/title_activity_search" >
+
         </activity>
         <activity
-            android:name=".Intro"
-            android:label="@string/title_activity_intro" >
+            android:name=".SingleRun"
+            android:label="@string/title_activity_single_run" >
         </activity>
     </application>
 

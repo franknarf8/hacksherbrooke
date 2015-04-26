@@ -37,19 +37,18 @@ public class SingleRun extends FragmentActivity {
     private List<BikeRoad> paths;
     private List<PointOfInterest> points;
     private BikeRoad path;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        paths = (List< BikeRoad>)getIntent().getSerializableExtra("Coordinate");
-        points = (List<PointOfInterest>)getIntent().getSerializableExtra("Points");
+        paths = (List<BikeRoad>) getIntent().getSerializableExtra("Coordinate");
+        points = (List<PointOfInterest>) getIntent().getSerializableExtra("Points");
         setContentView(R.layout.activity_single_run);
         setUpMapIfNeeded();
     }
 
-    public void onLocationChanged(Location loc){
-
-
+    public void onLocationChanged(Location loc) {
 
 
     }
@@ -64,11 +63,11 @@ public class SingleRun extends FragmentActivity {
      * Sets up the map if it is possible to do so (i.e., the Google Play services APK is correctly
      * installed) and the map has not already been instantiated.. This will ensure that we only ever
      * call {@link #setUpMap()} once when {@link #mMap} is not null.
-     * <p/>
+     * <p>
      * If it isn't installed {@link SupportMapFragment} (and
      * {@link com.google.android.gms.maps.MapView MapView}) will show a prompt for the user to
      * install/update the Google Play services APK on their device.
-     * <p/>
+     * <p>
      * A user can return to this FragmentActivity after following the prompt and correctly
      * installing/updating/enabling the Google Play services. Since the FragmentActivity may not
      * have been completely destroyed during this process (it is likely that it would only be
@@ -94,7 +93,7 @@ public class SingleRun extends FragmentActivity {
         Coordinate min = new Coordinate(coord);
         Coordinate max = new Coordinate(coord);
         for (int i = 0; i != paths.size(); ++i) {
-            for(int j =0; j != paths.get(i).geometry.size(); ++j){
+            for (int j = 0; j != paths.get(i).geometry.size(); ++j) {
                 coord = new Coordinate(paths.get(i).geometry.get(j));
                 min.latitude = Math.min(min.latitude, coord.latitude);
                 min.longitude = Math.min(min.longitude, coord.longitude);
@@ -108,18 +107,18 @@ public class SingleRun extends FragmentActivity {
     /**
      * This is where we can add markers or lines, add listeners or move the camera. In this case, we
      * just add a marker near Africa.
-     * <p/>
+     * <p>
      * This should only be called once and when we are sure that {@link #mMap} is not null.
      */
     private void setUpMap() {
 
         ArrayList<PolylineOptions> line = new ArrayList<>();
 
-        for(int i = 0 ; i != paths.size(); i++){
+        for (int i = 0; i != paths.size(); i++) {
 
             PolylineOptions temp = new PolylineOptions();
 
-            for(int k = 0 ; k != paths.get(i).geometry.size();k++){
+            for (int k = 0; k != paths.get(i).geometry.size(); k++) {
 
                 temp.add(new LatLng(paths.get(i).geometry.get(k).longitude, paths.get(i).geometry.get(k).latitude));
                 /*mMap.addMarker(new MarkerOptions()
@@ -139,69 +138,75 @@ public class SingleRun extends FragmentActivity {
 
         }
 
-        for (PointOfInterest point : points) {
+        //for (PointOfInterest point : points) {
+        for (int i =0; i!= points.size(); ++i) {
+            PointOfInterest point = points.get(i);
 
             PointOfInterest.Type type = point.type;
+            try {
+                switch (type) {
 
-            switch (type) {
-
-                case BAR: {
-                    mMap.addMarker(new MarkerOptions()
-                            .position(new LatLng(point.location.latitude, point.location.longitude))
-                            .title(point.name)
-                            .icon(BitmapDescriptorFactory.fromResource(R.drawable.beericon)));
-                    break;
+                    case BAR: {
+                        mMap.addMarker(new MarkerOptions()
+                                .position(new LatLng(point.location.latitude, point.location.longitude))
+                                .title(point.name)
+                                .icon(BitmapDescriptorFactory.fromResource(R.drawable.beericon)));
+                        break;
+                    }
+                    case MAGASIN: {
+                        mMap.addMarker(new MarkerOptions()
+                                .position(new LatLng(point.location.latitude, point.location.longitude))
+                                .title(point.name)
+                                .icon(BitmapDescriptorFactory.fromResource(R.drawable.quikemart)));
+                        break;
+                    }
+                    case FOOD: {
+                        mMap.addMarker(new MarkerOptions()
+                                .position(new LatLng(point.location.latitude, point.location.longitude))
+                                .title(point.name)
+                                .icon(BitmapDescriptorFactory.fromResource(R.drawable.burger)));
+                        break;
+                    }
+                    case EVENT: {
+                        mMap.addMarker(new MarkerOptions()
+                                .position(new LatLng(point.location.latitude, point.location.longitude))
+                                .title(point.name)
+                                .icon(BitmapDescriptorFactory.fromResource(R.drawable.event)));
+                        break;
+                    }
+                    case POOL: {
+                        mMap.addMarker(new MarkerOptions()
+                                .position(new LatLng(point.location.latitude, point.location.longitude))
+                                .title(point.name)
+                                .icon(BitmapDescriptorFactory.fromResource(R.drawable.swimmingpool)));
+                        break;
+                    }
+                    case PARK: {
+                        mMap.addMarker(new MarkerOptions()
+                                .position(new LatLng(point.location.latitude, point.location.longitude))
+                                .title(point.name)
+                                .icon(BitmapDescriptorFactory.fromResource(R.drawable.tree)));
+                        break;
+                    }
+                    case WIFI: {
+                        mMap.addMarker(new MarkerOptions()
+                                .position(new LatLng(point.location.latitude, point.location.longitude))
+                                .title(point.name)
+                                .icon(BitmapDescriptorFactory.fromResource(R.drawable.wifi)));
+                        break;
+                    }
+                    default: {
+                        mMap.addMarker(new MarkerOptions()
+                                .position(new LatLng(point.location.latitude, point.location.longitude))
+                                .title(point.name)
+                                .icon(BitmapDescriptorFactory.fromResource(R.drawable.question)));
+                        break;
+                    }
                 }
-                case MAGASIN: {
-                    mMap.addMarker(new MarkerOptions()
-                            .position(new LatLng(point.location.latitude, point.location.longitude))
-                            .title(point.name)
-                            .icon(BitmapDescriptorFactory.fromResource(R.drawable.quikemart)));
-                    break;
-                }
-                case FOOD: {
-                    mMap.addMarker(new MarkerOptions()
-                            .position(new LatLng(point.location.latitude, point.location.longitude))
-                            .title(point.name)
-                            .icon(BitmapDescriptorFactory.fromResource(R.drawable.burger)));
-                    break;
-                }
-                case EVENT: {
-                    mMap.addMarker(new MarkerOptions()
-                            .position(new LatLng(point.location.latitude, point.location.longitude))
-                            .title(point.name)
-                            .icon(BitmapDescriptorFactory.fromResource(R.drawable.event)));
-                    break;
-                }
-                case POOL: {
-                    mMap.addMarker(new MarkerOptions()
-                            .position(new LatLng(point.location.latitude, point.location.longitude))
-                            .title(point.name)
-                            .icon(BitmapDescriptorFactory.fromResource(R.drawable.swimmingpool)));
-                    break;
-                }
-                case PARK: {
-                    mMap.addMarker(new MarkerOptions()
-                            .position(new LatLng(point.location.latitude, point.location.longitude))
-                            .title(point.name)
-                            .icon(BitmapDescriptorFactory.fromResource(R.drawable.tree)));
-                    break;
-                }
-                case WIFI: {
-                    mMap.addMarker(new MarkerOptions()
-                            .position(new LatLng(point.location.latitude, point.location.longitude))
-                            .title(point.name)
-                            .icon(BitmapDescriptorFactory.fromResource(R.drawable.wifi)));
-                    break;
-                }
-                default: {
-                    mMap.addMarker(new MarkerOptions()
-                            .position(new LatLng(point.location.latitude, point.location.longitude))
-                            .title(point.name)
-                            .icon(BitmapDescriptorFactory.fromResource(R.drawable.question)));
-                    break;
-                }
+            } catch (Exception e) {
+                int a = 2;
             }
+            int b = 3;
         }
     }
 }
