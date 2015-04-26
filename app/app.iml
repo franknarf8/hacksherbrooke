@@ -23,7 +23,11 @@
       </configuration>
     </facet>
   </component>
+<<<<<<< HEAD
+  <component name="NewModuleRootManager" inherit-compiler-output="false">
+=======
   <component name="NewModuleRootManager" inherit-compiler-output="true">
+>>>>>>> bc895ca5797a3c4c61ba49ab1831d5e072574697
     <output url="file://$MODULE_DIR$/build/intermediates/classes/debug" />
     <output-test url="file://$MODULE_DIR$/build/intermediates/classes/androidTest/debug" />
     <exclude-output />
