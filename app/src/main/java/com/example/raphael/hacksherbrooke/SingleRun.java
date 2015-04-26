@@ -6,6 +6,8 @@ import android.util.Log;
 
 import com.example.raphael.hacksherbrooke.parsers.BikeRoadParser;
 import com.example.raphael.hacksherbrooke.parsers.DataObjects.BikeRoad;
+import com.google.android.gms.maps.CameraUpdate;
+import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
@@ -93,7 +95,5 @@ public class SingleRun extends FragmentActivity {
 
         }
 
-
-        mMap.addMarker(new MarkerOptions().position(new LatLng(0, 0)).title("Marker"));
     }
 }

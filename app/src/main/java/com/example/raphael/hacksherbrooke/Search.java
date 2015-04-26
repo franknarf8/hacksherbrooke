@@ -17,6 +17,7 @@ import android.widget.RadioGroup;
 
 import com.example.raphael.hacksherbrooke.parsers.DataObjects.BikeRoad;
 import com.example.raphael.hacksherbrooke.parsers.BikeRoadParser;
+import com.example.raphael.hacksherbrooke.parsers.DataObjects.PointOfInterest;
 import com.example.raphael.hacksherbrooke.parsers.FoodParser;
 import com.example.raphael.hacksherbrooke.parsers.SingletonDatabase;
 
@@ -145,11 +146,11 @@ public class Search extends ActionBarActivity {
 
 
 
-        Evaluate(SingletonDatabase.getInstance().bikeRoads);
+        Evaluate(SingletonDatabase.getInstance().bikeRoads, SingletonDatabase.getInstance().ptsInterest);
 
     }
 
-    public void Evaluate(List<BikeRoad> bikeRoadsArray){
+    public void Evaluate(List<BikeRoad> bikeRoadsArray, List<PointOfInterest> points){
 
 
         for(int i = 0; i< bikeRoadsArray.size();i++) {
@@ -218,7 +219,6 @@ public class Search extends ActionBarActivity {
         Intent nextMove = new Intent(this, SingleRun.class);
 
         nextMove.putExtra("Coordinate", possiblePaths);
-
         startActivity(nextMove);
 
     }
