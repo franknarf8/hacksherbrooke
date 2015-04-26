@@ -46,10 +46,6 @@
             android:name=".SingleRun"
             android:label="@string/title_activity_single_run" >
         </activity>
-        <activity
-            android:name=".SmallMap"
-            android:label="@string/title_activity_small_map" >
-        </activity>
     </application>
 
 </manifest>

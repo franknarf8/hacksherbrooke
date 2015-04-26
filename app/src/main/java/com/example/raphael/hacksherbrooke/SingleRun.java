@@ -120,93 +120,69 @@ public class SingleRun extends FragmentActivity {
         }
 
 
-        for(int l = 0 ; l< line.size(); l++){
+        for (PolylineOptions aLine : line) {
 
-            mMap.addPolyline(line.get(l));
+            mMap.addPolyline(aLine);
             mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(getBounds().getCenter(), 11));
 
         }
 
-        for(int z = 0 ; z< points.size();z++){
+        for (PointOfInterest point : points) {
 
-            PointOfInterest.Type type = points.get(z).type;
+            PointOfInterest.Type type = point.type;
 
-            switch(type){
+            switch (type) {
 
-                case BAR:{
+                case BAR: {
                     mMap.addMarker(new MarkerOptions()
-                            .position(new LatLng(points.get(z).location.latitude, points.get(z).location.longitude))
-                            .title(points.get(z).name)
+                            .position(new LatLng(point.location.latitude, point.location.longitude))
+                            .title(point.name)
                             .icon(BitmapDescriptorFactory.fromResource(R.drawable.beericon)));
                     break;
-
                 }
-                case MAGASIN:{
+                case MAGASIN: {
                     mMap.addMarker(new MarkerOptions()
-                            .position(new LatLng(points.get(z).location.latitude, points.get(z).location.longitude))
-                            .title(points.get(z).name)
+                            .position(new LatLng(point.location.latitude, point.location.longitude))
+                            .title(point.name)
                             .icon(BitmapDescriptorFactory.fromResource(R.drawable.quikemart)));
                     break;
-
-
                 }
-
-                case FOOD:{
-
+                case FOOD: {
                     mMap.addMarker(new MarkerOptions()
-                            .position(new LatLng(points.get(z).location.latitude, points.get(z).location.longitude))
-                            .title(points.get(z).name)
+                            .position(new LatLng(point.location.latitude, point.location.longitude))
+                            .title(point.name)
                             .icon(BitmapDescriptorFactory.fromResource(R.drawable.burger)));
                     break;
-
-
                 }
-
-                case EVENT:{
-
+                case EVENT: {
                     mMap.addMarker(new MarkerOptions()
-                            .position(new LatLng(points.get(z).location.latitude, points.get(z).location.longitude))
-                            .title(points.get(z).name)
+                            .position(new LatLng(point.location.latitude, point.location.longitude))
+                            .title(point.name)
                             .icon(BitmapDescriptorFactory.fromResource(R.drawable.event)));
                     break;
-
                 }
-
-                case POOL:{
-
+                case POOL: {
                     mMap.addMarker(new MarkerOptions()
-                            .position(new LatLng(points.get(z).location.latitude, points.get(z).location.longitude))
-                            .title(points.get(z).name)
+                            .position(new LatLng(point.location.latitude, point.location.longitude))
+                            .title(point.name)
                             .icon(BitmapDescriptorFactory.fromResource(R.drawable.swimmingpool)));
                     break;
-
-
                 }
-
-                case PARK:{
-
+                case PARK: {
                     mMap.addMarker(new MarkerOptions()
-                            .position(new LatLng(points.get(z).location.latitude, points.get(z).location.longitude))
-                            .title(points.get(z).name)
+                            .position(new LatLng(point.location.latitude, point.location.longitude))
+                            .title(point.name)
                             .icon(BitmapDescriptorFactory.fromResource(R.drawable.tree)));
                     break;
-
-
                 }
-
-                default:{
-
+                default: {
                     mMap.addMarker(new MarkerOptions()
-                            .position(new LatLng(points.get(z).location.latitude, points.get(z).location.longitude))
-                            .title(points.get(z).name)
+                            .position(new LatLng(point.location.latitude, point.location.longitude))
+                            .title(point.name)
                             .icon(BitmapDescriptorFactory.fromResource(R.drawable.question)));
                     break;
-
                 }
-
             }
-
         }
-
     }
 }
