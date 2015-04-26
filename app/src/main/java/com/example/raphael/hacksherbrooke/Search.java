@@ -12,13 +12,10 @@ import android.widget.CheckBox;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
-import com.example.raphael.hacksherbrooke.parsers.AttractionParser;
+import com.example.raphael.hacksherbrooke.parsers.*;
 import com.example.raphael.hacksherbrooke.parsers.DataObjects.BikeRoad;
-import com.example.raphael.hacksherbrooke.parsers.BikeRoadParser;
 import com.example.raphael.hacksherbrooke.parsers.DataObjects.PointOfInterest;
 import com.example.raphael.hacksherbrooke.parsers.DataObjects.Profile;
-import com.example.raphael.hacksherbrooke.parsers.FoodParser;
-import com.example.raphael.hacksherbrooke.parsers.SingletonDatabase;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -44,6 +41,7 @@ public class Search extends Activity {
             instance.ptsInterest = new FoodParser().getPointOfInterest(assetManager.open("restaurants.json"));
             instance.bikeRoads = new BikeRoadParser().getRoads(assetManager.open("pistecyclable.csv"));
             instance.ptsInterest.addAll(new AttractionParser().getPointOfInterest(assetManager.open("attractions.json")));
+            instance.ptsInterest.addAll(new WifiParser().getPointOfInterest(assetManager.open("wifi.csv")));
         } catch (IOException e) {
             e.printStackTrace();
         }
