@@ -1,5 +1,6 @@
 package com.example.raphael.hacksherbrooke.parsers;
 
+import com.example.raphael.hacksherbrooke.parsers.DataObjects.BikeRoad;
 import com.opencsv.CSVReader;
 import java.io.IOException;
 import java.io.InputStream;

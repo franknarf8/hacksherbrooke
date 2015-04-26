@@ -1,4 +1,6 @@
-package com.example.raphael.hacksherbrooke.parsers;
+package com.example.raphael.hacksherbrooke.parsers.DataObjects;
+
+import com.example.raphael.hacksherbrooke.parsers.Coordinate;
 
 import java.util.List;
 
