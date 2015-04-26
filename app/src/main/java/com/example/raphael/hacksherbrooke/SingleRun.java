@@ -1,11 +1,16 @@
 package com.example.raphael.hacksherbrooke;
 
+import android.content.Context;
 import android.graphics.Camera;
 import android.graphics.Point;
+import android.location.Criteria;
+import android.location.Location;
+import android.location.LocationManager;
 import android.os.Debug;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.example.raphael.hacksherbrooke.parsers.BikeRoadParser;
 import com.example.raphael.hacksherbrooke.parsers.Coordinate;
@@ -40,6 +45,13 @@ public class SingleRun extends FragmentActivity {
         points = (List<PointOfInterest>)getIntent().getSerializableExtra("Points");
         setContentView(R.layout.activity_single_run);
         setUpMapIfNeeded();
+    }
+
+    public void onLocationChanged(Location loc){
+
+
+
+
     }
 
     @Override
@@ -179,7 +191,7 @@ public class SingleRun extends FragmentActivity {
                     mMap.addMarker(new MarkerOptions()
                             .position(new LatLng(point.location.latitude, point.location.longitude))
                             .title(point.name)
-                            .icon(BitmapDescriptorFactory.fromResource(R.drawable.tree)));
+                            .icon(BitmapDescriptorFactory.fromResource(R.drawable.wifi)));
                     break;
                 }
                 default: {

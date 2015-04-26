@@ -10,31 +10,31 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageButton"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
         android:src="@drawable/couple"
-        android:onClick="OnCoupleView" />
+        android:onClick="OnCoupleView"
+        android:layout_above="@+id/imageButton3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageButton2"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
         android:src="@drawable/extrememountain"
-        android:onClick="ExtremeMountain" />
+        android:onClick="ExtremeMountain"
+        android:layout_above="@+id/imageButton4"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageButton3"
-        android:layout_below="@+id/imageButton"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
         android:src="@drawable/funresized"
-        android:onClick="FunView" />
+        android:onClick="FunView"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -50,11 +50,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageButton5"
-        android:layout_below="@+id/imageButton3"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
         android:src="@drawable/mountain"
-        android:onClick="OnMountainView" />
+        android:onClick="OnMountainView"
+        android:layout_above="@+id/imageButton7"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -74,5 +74,13 @@
         android:layout_centerHorizontal="true"
         android:src="@drawable/button"
         android:onClick="OnButtonPressed" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/choose" />
 
 </RelativeLayout>

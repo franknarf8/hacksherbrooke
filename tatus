@@ -1,0 +1,447 @@
+[33mcommit 09656d2d8f2b40a59c9fa8f37a5a32603009bb5e[m
+Merge: a4629ad 7396194
+Author: rars <yopunkrap@hotmail.com>
+Date:   Sun Apr 26 09:42:35 2015 -0400
+
+    X3
+
+[33mcommit a4629ad431bf150e1a98d1c515d0992f5ac101d4[m
+Author: rars <yopunkrap@hotmail.com>
+Date:   Sun Apr 26 09:41:59 2015 -0400
+
+    X2
+
+[33mcommit 73961946c9d14cf169f111b2e10fc6f0d77962dd[m
+Author: Frank Gen <frankgenerated@gmail.com>
+Date:   Sun Apr 26 08:30:04 2015 -0400
+
+    Merge branch 'master' of github.com:franknarf8/hacksherbrooke
+    
+    Conflicts:
+    	app/src/main/java/com/example/raphael/hacksherbrooke/Search.java
+    	app/src/main/java/com/example/raphael/hacksherbrooke/SingleRun.java
+
+[33mcommit 01ff972e0583f885b3832fa07b35045f2a5a10c7[m
+Merge: fbaf8c6 d618362
+Author: Frank Gen <frankgenerated@gmail.com>
+Date:   Sun Apr 26 07:57:47 2015 -0400
+
+    Merge branch 'master' of github.com:franknarf8/hacksherbrooke
+
+[33mcommit fbaf8c616545e3d396324b69d28b70a27252a372[m
+Author: Frank Gen <frankgenerated@gmail.com>
+Date:   Sun Apr 26 07:57:29 2015 -0400
+
+    Interface clean up. Playing with this is like playing play-doe with a chunk of shit
+
+[33mcommit d618362ca5a9494919fa40f12774d2021a8744b7[m
+Author: rars <yopunkrap@hotmail.com>
+Date:   Sun Apr 26 06:07:15 2015 -0400
+
+    Profile2
+
+[33mcommit 7a31d7f59b6ba4eacd4fa31f17ebc666295447fd[m
+Merge: e9fc9aa bc895ca
+Author: rars <yopunkrap@hotmail.com>
+Date:   Sun Apr 26 06:06:36 2015 -0400
+
+    Merge branch 'master' of https://github.com/franknarf8/hacksherbrooke
+    
+    Conflicts:
+    	app/app.iml
+    	app/src/main/java/com/example/raphael/hacksherbrooke/Search.java
+
+[33mcommit e9fc9aa52e567a59c1feac7711463898e1da9fc6[m
+Author: rars <yopunkrap@hotmail.com>
+Date:   Sun Apr 26 06:00:49 2015 -0400
+
+    Profiles
+
+[33mcommit bc895ca5797a3c4c61ba49ab1831d5e072574697[m
+Merge: 9f9cf34 c59b27d
+Author: Frank Gen <frankgenerated@gmail.com>
+Date:   Sun Apr 26 05:31:55 2015 -0400
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 9f9cf3447d2d9aa7367191e70d10e263841ae9a4[m
+Author: Frank Gen <frankgenerated@gmail.com>
+Date:   Sun Apr 26 05:26:55 2015 -0400
+
+    Merge branch 'master' of github.com:franknarf8/hacksherbrooke
+    
+    Conflicts:
+    	app/src/main/java/com/example/raphael/hacksherbrooke/Search.java
+    	app/src/main/java/com/example/raphael/hacksherbrooke/SingleRun.java
+
+[33mcommit c59b27d96bc4f4a7fe6455559bd55d1d8c68885a[m
+Author: rars <yopunkrap@hotmail.com>
+Date:   Sun Apr 26 05:23:04 2015 -0400
+
+    Main3
+
+[33mcommit 6002fb209dd4f2c1dd8c8e352a6d80c456b9a017[m
+Merge: 0111179 544819d
+Author: Frank Gen <frankgenerated@gmail.com>
+Date:   Sun Apr 26 05:21:56 2015 -0400
+
+    Merge branch 'master' of github.com:franknarf8/hacksherbrooke
+    
+    Conflicts:
+    	app/src/main/java/com/example/raphael/hacksherbrooke/Search.java
+    	app/src/main/java/com/example/raphael/hacksherbrooke/SingleRun.java
+
+[33mcommit 01111798eb701869eebebf053c1b3b333503234a[m
+Author: Frank Gen <frankgenerated@gmail.com>
+Date:   Sun Apr 26 05:13:58 2015 -0400
+
+    Woo!
+
+[33mcommit 544819d1f620dbd2445dd76ee58b75852652960e[m
+Author: rars <yopunkrap@hotmail.com>
+Date:   Sun Apr 26 05:13:09 2015 -0400
+
+    MainMenu2
+
+[33mcommit 55651222c6c1ccc5ef540ee36914bce5b8653e76[m
+Author: Frank Gen <frankgenerated@gmail.com>
+Date:   Sat Apr 25 23:26:03 2015 -0400
+
+    added attractions dataset
+
+[33mcommit d2e5b64be0fd0e5d0adeb7a2d8eebd135507818d[m
+Merge: 5514660 aa72376
+Author: rars <yopunkrap@hotmail.com>
+Date:   Sat Apr 25 23:24:54 2015 -0400
+
+    Merge branch 'HEAD' of https://github.com/franknarf8/hacksherbrooke
+
+[33mcommit 55146606e0d0ea3394a7a8de24deb4b03c0a6e83[m
+Author: rars <yopunkrap@hotmail.com>
+Date:   Sat Apr 25 23:24:33 2015 -0400
+
+    Merge branch 'HEAD' of https://github.com/franknarf8/hacksherbrooke
+    
+    Conflicts:
+    	app/src/main/java/com/example/raphael/hacksherbrooke/Search.java
+
+[33mcommit aa7237664b073380ccb24c3407cf9eb8b00b4f0d[m
+Author: Frank Gen <frankgenerated@gmail.com>
+Date:   Sat Apr 25 22:43:49 2015 -0400
+
+    New Points of interests
+
+[33mcommit 41729dc8cb908045f7a097afc2b9018f3cdd14b8[m
+Author: rars <yopunkrap@hotmail.com>
+Date:   Sat Apr 25 22:21:50 2015 -0400
+
+    SearchFini
+
+[33mcommit 2b83b05d19753576c7e1b9b9c804ec8696fd8180[m
+Merge: 1931ef5 240f5a6
+Author: rars <yopunkrap@hotmail.com>
+Date:   Sat Apr 25 22:16:26 2015 -0400
+
+    Merge branch 'master' of https://github.com/franknarf8/hacksherbrooke
+    
+    Conflicts:
+    	app/src/main/java/com/example/raphael/hacksherbrooke/Search.java
+
+[33mcommit 1931ef59d33b6329a091078e04f45fd777709e2a[m
+Merge: e0daaad 78f560f
+Author: rars <yopunkrap@hotmail.com>
+Date:   Sat Apr 25 22:15:21 2015 -0400
+
+    Merge branch 'HEAD' of https://github.com/franknarf8/hacksherbrooke
+    
+    Conflicts:
+    	app/src/main/java/com/example/raphael/hacksherbrooke/Search.java
+
+[33mcommit 240f5a674416f6469c30523a0f11106613ec7a54[m
+Author: Frank Gen <frankgenerated@gmail.com>
+Date:   Sat Apr 25 22:13:08 2015 -0400
+
+    removed search
+
+[33mcommit e0daaad2fe1a3912c07d08b505e4a0afe577a8d2[m
+Author: rars <yopunkrap@hotmail.com>
+Date:   Sat Apr 25 22:08:57 2015 -0400
+
+    Merge branch 'HEAD' of https://github.com/franknarf8/hacksherbrooke
+    
+    Conflicts:
+    	app/src/main/java/com/example/raphael/hacksherbrooke/Search.java
+
+[33mcommit 78f560f3b5ed2eda8ca6effaae06743fb88a24f7[m
+Merge: 5e279ae 79596d5
+Author: Frank Gen <frankgenerated@gmail.com>
+Date:   Sat Apr 25 22:07:07 2015 -0400
+
+    Merge remote-tracking branch 'origin/master'
+    
+    Conflicts:
+    	app/src/main/java/com/example/raphael/hacksherbrooke/Search.java
+
+[33mcommit 5e279ae01697943f4ea066d975e7e1c6caebfcef[m
+Author: Frank Gen <frankgenerated@gmail.com>
+Date:   Sat Apr 25 22:06:20 2015 -0400
+
+    added attraction parser
+
+[33mcommit ca96da407d6cfa2b6d30c990d2785ad24e8e7195[m
+Author: Frank Gen <frankgenerated@gmail.com>
+Date:   Sat Apr 25 22:06:05 2015 -0400
+
+    added attraction parser
+
+[33mcommit 79596d51d3ddb6cc1a8cd2e99e5b0b1e3ea9d6ac[m
+Merge: 60a3cbe 1bac37f
+Author: rars <yopunkrap@hotmail.com>
+Date:   Sat Apr 25 20:45:32 2015 -0400
+
+    Search
+
+[33mcommit 60a3cbeaf44fde8779cee28884ab770a4ceec400[m
+Author: rars <yopunkrap@hotmail.com>
+Date:   Sat Apr 25 20:25:43 2015 -0400
+
+    Search finished
+
+[33mcommit 1bac37f9ca0dd31a47af7494538bd5005278cfac[m
+Author: Frank Gen <frankgenerated@gmail.com>
+Date:   Sat Apr 25 19:33:21 2015 -0400
+
+    Merge branch 'master' of github.com:franknarf8/hacksherbrooke
+    
+    Conflicts:
+    	app/src/main/java/com/example/raphael/hacksherbrooke/Search.java
+
+[33mcommit 0330cdb17f80d2d0cac7923401571bb197f532e4[m
+Merge: 7942886 17dc0e1
+Author: Frank Gen <frankgenerated@gmail.com>
+Date:   Sat Apr 25 19:32:05 2015 -0400
+
+    Merge branch 'master' of github.com:franknarf8/hacksherbrooke
+    
+    Conflicts:
+    	app/src/main/java/com/example/raphael/hacksherbrooke/Search.java
+
+[33mcommit 79428869d8af885b5ff692d276ee2c2c6c7cb1ac[m
+Author: Frank Gen <frankgenerated@gmail.com>
+Date:   Sat Apr 25 19:25:03 2015 -0400
+
+    Wanna pull
+
+[33mcommit 17dc0e1079f8587005c16bb138e12ec26714418b[m
+Merge: 6ea56c9 63c1a22
+Author: rars <yopunkrap@hotmail.com>
+Date:   Sat Apr 25 19:07:49 2015 -0400
+
+    Merge branch 'HEAD' of https://github.com/franknarf8/hacksherbrooke
+
+[33mcommit 6ea56c95570a789aeb1290461570cd2aab1601ba[m
+Author: rars <yopunkrap@hotmail.com>
+Date:   Sat Apr 25 19:07:44 2015 -0400
+
+    Search
+
+[33mcommit 63c1a2210db113cdb0db6efe362a345cf13e7e82[m
+Merge: af27426 c9cd072
+Author: Frank Gen <frankgenerated@gmail.com>
+Date:   Sat Apr 25 18:57:47 2015 -0400
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit af27426c9d35f52d89ad6dd526035f2eaac791ab[m
+Author: Frank Gen <frankgenerated@gmail.com>
+Date:   Sat Apr 25 18:57:36 2015 -0400
+
+    Created parsers for PoI and RoadParser was refactored. Dataset added.
+
+[33mcommit c9cd072c41976ba3cb521f7ae5975b5c92386ed2[m
+Merge: 51e9f65 689ce3f
+Author: rars <yopunkrap@hotmail.com>
+Date:   Sat Apr 25 16:51:17 2015 -0400
+
+    Merge branch 'HEAD' of https://github.com/franknarf8/hacksherbrooke
+
+[33mcommit 51e9f65a388e65686672cd6cc02b6b57fcbd23a6[m
+Author: rars <yopunkrap@hotmail.com>
+Date:   Sat Apr 25 16:51:10 2015 -0400
+
+    Search
+
+[33mcommit 689ce3f821f1b4f04882e11ec37e8bf43fb6ff17[m
+Merge: 3987d48 8cc84a0
+Author: Frank Gen <frankgenerated@gmail.com>
+Date:   Sat Apr 25 16:50:39 2015 -0400
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 3987d48cb0e6a2de97a50867ebad5280be20e1ee[m
+Author: Frank Gen <frankgenerated@gmail.com>
+Date:   Sat Apr 25 16:49:56 2015 -0400
+
+    Bike road objects added, getRoads returns a list of BikeRoads
+
+[33mcommit 8cc84a049e79c5eaf6165eb76afcf66f630523b3[m
+Merge: 0268552 c26102b
+Author: rars <yopunkrap@hotmail.com>
+Date:   Sat Apr 25 16:32:27 2015 -0400
+
+    Merge branch 'HEAD' of https://github.com/franknarf8/hacksherbrooke
+
+[33mcommit 02685529168cdc8bdcdbf99091d8ff8e3974408a[m
+Author: rars <yopunkrap@hotmail.com>
+Date:   Sat Apr 25 16:31:51 2015 -0400
+
+    Search
+
+[33mcommit c26102bbe1ad36e5553b2ff57dca2e41a910ca63[m
+Merge: 73e5c6a 9f11a07
+Author: Frank Gen <frankgenerated@gmail.com>
+Date:   Sat Apr 25 16:29:21 2015 -0400
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 73e5c6a62b79785aef1cc79da1f06b0958e03678[m
+Author: Frank Gen <frankgenerated@gmail.com>
+Date:   Sat Apr 25 16:29:06 2015 -0400
+
+    GetRoads working
+
+[33mcommit 9f11a07779b9d4c4e945e6ae50fed16814c334fa[m
+Merge: 02afba9 2fa10db
+Author: rars <yopunkrap@hotmail.com>
+Date:   Sat Apr 25 14:02:21 2015 -0400
+
+    Merge branch 'master' of https://github.com/franknarf8/hacksherbrooke
+
+[33mcommit 02afba9e7e0eb6ef70c8de3c5448784b9050b723[m
+Author: rars <yopunkrap@hotmail.com>
+Date:   Sat Apr 25 14:01:43 2015 -0400
+
+    Search Screen
+
+[33mcommit 2fa10db12d748e4f4f604855b07dd21ac0b327dc[m
+Author: Frank Gen <frankgenerated@gmail.com>
+Date:   Sat Apr 25 13:44:12 2015 -0400
+
+    Keys working
+
+[33mcommit d806feab8f3bba71eef5161cd0048e896e2a519f[m
+Author: rars <yopunkrap@hotmail.com>
+Date:   Sat Apr 25 12:53:53 2015 -0400
+
+    First commit
+
+[33mcommit b3a53014a6b8542e79168882ac7463aad14b6c87[m
+Author: Frank Gen <frankgenerated@gmail.com>
+Date:   Sat Apr 25 12:38:41 2015 -0400
+
+    reset
+
+[33mcommit 0db801cf0a97d5720b74e3175bc5435081675f4d[m
+Merge: a9d7db8 8706b6e
+Author: Frank Gen <frankgenerated@gmail.com>
+Date:   Sat Apr 25 12:15:44 2015 -0400
+
+    Merge branch 'master' of github.com:franknarf8/hacksherbrooke
+
+[33mcommit a9d7db82cdc98248539f55e37dd05f37fdb0019a[m
+Author: Frank Gen <frankgenerated@gmail.com>
+Date:   Sat Apr 25 12:12:28 2015 -0400
+
+    ignored files
+
+[33mcommit 095b166782ee06eccb7a9d23828469d8dd4e5d46[m
+Author: Frank Gen <frankgenerated@gmail.com>
+Date:   Sat Apr 25 12:10:54 2015 -0400
+
+    removed .idea files
+
+[33mcommit 8706b6e3449876b67d0ecf5101cb8387c036e1bd[m
+Author: rars <yopunkrap@hotmail.com>
+Date:   Sat Apr 25 11:56:54 2015 -0400
+
+    Google Key
+
+[33mcommit 2253cb67c5bebc2d485dce237328e86f1e3cec1b[m
+Author: rars <yopunkrap@hotmail.com>
+Date:   Sat Apr 25 11:56:01 2015 -0400
+
+    New Project Google Maps
+
+[33mcommit b14177b949c33ea3d2faa6703c4f2d5b64457f36[m
+Merge: 48d3151 990f864
+Author: rars <yopunkrap@hotmail.com>
+Date:   Sat Apr 25 11:50:52 2015 -0400
+
+    Merge branch 'master' of https://github.com/franknarf8/hacksherbrooke
+
+[33mcommit 48d315119a8de46b7435f8c3a4320d269a658ded[m
+Author: rars <yopunkrap@hotmail.com>
+Date:   Sat Apr 25 11:49:19 2015 -0400
+
+    Commit Raph 1
+
+[33mcommit 990f864fb501f624ba066744589178eb5d7b0ec9[m
+Author: Frank Gen <frankgenerated@gmail.com>
+Date:   Sat Apr 25 11:25:22 2015 -0400
+
+    Working event click and counter
+
+[33mcommit 51b568dac95c7a3ce6ce0ab4ce005071a6290c23[m
+Author: Frank Gen <frankgenerated@gmail.com>
+Date:   Sat Apr 25 11:14:33 2015 -0400
+
+    Simple use case
+
+[33mcommit 95016e7dc8631a1370d308dba850e86573feba59[m
+Author: Frank Gen <frankgenerated@gmail.com>
+Date:   Sat Apr 25 11:07:10 2015 -0400
+
+    Removed useless files
+
+[33mcommit ce8e802f3a8d2002df848fb20611f7b56056db01[m
+Author: Frank Gen <frankgenerated@gmail.com>
+Date:   Sat Apr 25 11:02:02 2015 -0400
+
+    new stuff
+
+[33mcommit f7db4d956369ac48e9b629fbcfa1db4916254ff1[m
+Author: Frank Gen <frankgenerated@gmail.com>
+Date:   Sat Apr 25 10:43:34 2015 -0400
+
+    added git ignore
+
+[33mcommit a5b588c4f698738f170f75aa207d838b86d2be43[m
+Author: Frank Gen <frankgenerated@gmail.com>
+Date:   Sat Apr 25 10:25:30 2015 -0400
+
+    Modified
+
+[33mcommit a73cf2b6a5f9b0c3bf80562a5722e3f744071916[m
+Author: Frank Gen <frankgenerated@gmail.com>
+Date:   Sat Apr 25 10:20:35 2015 -0400
+
+    Changed to Java Android SDK
+
+[33mcommit 723008e58661bb945b53f027593f3b598aa661d3[m
+Merge: 22d2856 e9e921e
+Author: rars <yopunkrap@hotmail.com>
+Date:   Sat Apr 25 08:47:08 2015 -0400
+
+    Merge https://github.com/franknarf8/hacksherbrooke
+
+[33mcommit 22d2856484d0f6b402d88e4c3d8824475ea13f09[m
+Author: rars <yopunkrap@hotmail.com>
+Date:   Sat Apr 25 08:43:38 2015 -0400
+
+    First commit
+
+[33mcommit e9e921ea595deae1b584ec3bd2151e85b0c50c27[m
+Author: Frank Gen <frankgenerated@gmail.com>
+Date:   Fri Apr 24 20:29:02 2015 -0400
+
+    initial commit

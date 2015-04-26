@@ -74,10 +74,9 @@ public class Search extends Activity {
 
     public void ButtonOnButtonClick(View v) {
         parameters = new ArrayList<>();
-        Button button = (Button) v;
 
-        //Fetch the necessary data if the button Submit is prerssed
-        if(v.getId() == R.id.Submit){
+
+
 
 
             RadioGroup TerrainGroup=(RadioGroup)findViewById(R.id.radioGroupTerrain);
@@ -134,7 +133,7 @@ public class Search extends Activity {
             CheckBoxes.add(ch7);
             CheckBoxes.add(ch8);
             CheckBoxes.add(ch9);
-        }
+
 
         Evaluate(SingletonDatabase.getInstance().bikeRoads, SingletonDatabase.getInstance().ptsInterest);
 
