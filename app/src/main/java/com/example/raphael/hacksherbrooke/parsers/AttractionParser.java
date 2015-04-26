@@ -41,7 +41,7 @@ public class AttractionParser implements PointOfInterestParser {
                 poi.image = obj.getString("FichierImage");
                 String lowerName = poi.name.toLowerCase();
                 String lowerDesc = poi.name.toLowerCase();
-                if (lowerName.contains("bar") || lowerName.contains("brasseri") || lowerName.contains("pub") || lowerDesc.contains("bar "))
+                if (lowerName.contains("bière") || lowerDesc.contains("bière") || lowerName.contains("bar") || lowerName.contains("brasseri") || lowerName.contains("pub") || lowerDesc.contains("bar "))
                     poi.type = PointOfInterest.Type.BAR;
                 else if (lowerName.contains("parc "))
                     poi.type = PointOfInterest.Type.PARK;

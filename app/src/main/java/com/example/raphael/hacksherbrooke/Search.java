@@ -15,6 +15,7 @@ import android.widget.CheckBox;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
+import com.example.raphael.hacksherbrooke.parsers.AttractionParser;
 import com.example.raphael.hacksherbrooke.parsers.DataObjects.BikeRoad;
 import com.example.raphael.hacksherbrooke.parsers.BikeRoadParser;
 import com.example.raphael.hacksherbrooke.parsers.DataObjects.PointOfInterest;
@@ -43,7 +44,7 @@ public class Search extends ActionBarActivity {
             AssetManager assetManager = getAssets();
             instance.ptsInterest = new FoodParser().getPointOfInterest(assetManager.open("restaurants.json"));
             instance.bikeRoads = new BikeRoadParser().getRoads(assetManager.open("pistecyclable.csv"));
-
+            instance.ptsInterest.addAll(new AttractionParser().getPointOfInterest(assetManager.open("attractions.json")));
         } catch (IOException e) {
             e.printStackTrace();
         }
