@@ -2,7 +2,6 @@ package com.example.raphael.hacksherbrooke;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.AttributeSet;
 import android.view.Menu;
@@ -16,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +40,9 @@ public class MainActivity extends ActionBarActivity {
         CoupleProfile.RideSelected = "Road Bike";
         CoupleProfile.TerrainChoosen = "Paved";
         CoupleProfile.TimeSelected = "Whole afternoon";
+        Intent i = new Intent(this, Search.class);
+        i.putExtra("Profile",CoupleProfile);
+        startActivity(i);
     }
 
     public  void OnMountainView(View v){
@@ -51,6 +53,9 @@ public class MainActivity extends ActionBarActivity {
         mountain.TerrainChoosen = "Rocky";
         mountain.RideSelected = "Mountain Bike";
         mountain.TimeSelected = "2h to 2h30";
+        Intent i = new Intent(this, Search.class);
+        i.putExtra("Profile",mountain);
+        startActivity(i);
     }
 
     public void FunView(View v){
@@ -61,6 +66,9 @@ public class MainActivity extends ActionBarActivity {
         pro.TerrainChoosen = "Rocky";
         pro.RideSelected = "Kick Scooter";
         pro.TimeSelected = "1h to 1h30";
+        Intent i = new Intent(this, Search.class);
+        i.putExtra("Profile",pro);
+        startActivity(i);
     }
 
     public void KidsView(View v){
@@ -71,6 +79,9 @@ public class MainActivity extends ActionBarActivity {
         pro.TerrainChoosen = "Paved";
         pro.RideSelected = "Rollerblades";
         pro.TimeSelected = "30 to 45 min";
+        Intent i = new Intent(this, Search.class);
+        i.putExtra("Profile",pro);
+        startActivity(i);
     }
 
     public  void ExtremeMountain(View v){
@@ -81,6 +92,9 @@ public class MainActivity extends ActionBarActivity {
         pro.TerrainChoosen = "Rocky";
         pro.RideSelected = "Mountain Bike";
         pro.TimeSelected = "2h to 2h30";
+        Intent i = new Intent(this, Search.class);
+        i.putExtra("Profile",pro);
+        startActivity(i);
     }
 
     public void RidingBike(View v){
@@ -91,12 +105,19 @@ public class MainActivity extends ActionBarActivity {
         pro.TerrainChoosen = "Paved";
         pro.RideSelected = "Road Bike";
         pro.TimeSelected = "1h to 1h30";
+        Intent i = new Intent(this, Search.class);
+        i.putExtra("Profile",pro);
+        startActivity(i);
 
     }
 
     public void OnButtonPressed(View v){
 
+
+        Profile pro = new Profile();
+        pro.profile ="Custom";
         Intent i = new Intent(this, Search.class);
+        i.putExtra("Profile",pro);
         startActivity(i);
     }
     @Override

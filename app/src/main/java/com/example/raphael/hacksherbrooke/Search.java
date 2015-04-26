@@ -1,11 +1,11 @@
 package com.example.raphael.hacksherbrooke;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.content.res.AssetManager;
 import android.os.Debug;
 import android.util.Log;
 import android.provider.MediaStore;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -19,6 +19,7 @@ import com.example.raphael.hacksherbrooke.parsers.AttractionParser;
 import com.example.raphael.hacksherbrooke.parsers.DataObjects.BikeRoad;
 import com.example.raphael.hacksherbrooke.parsers.BikeRoadParser;
 import com.example.raphael.hacksherbrooke.parsers.DataObjects.PointOfInterest;
+import com.example.raphael.hacksherbrooke.parsers.DataObjects.Profile;
 import com.example.raphael.hacksherbrooke.parsers.FoodParser;
 import com.example.raphael.hacksherbrooke.parsers.SingletonDatabase;
 
@@ -30,12 +31,12 @@ import java.util.*;
 
 import static java.lang.Math.abs;
 
-public class Search extends ActionBarActivity {
+public class Search extends Activity {
 
     ArrayList<String> parameters;
     ArrayList<BikeRoad> possiblePaths;
     ArrayList<CheckBox> CheckBoxes;
-
+    Profile pro;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,6 +55,17 @@ public class Search extends ActionBarActivity {
         parameters = new ArrayList<>();
         possiblePaths = new ArrayList<>();
         CheckBoxes = new ArrayList<>();
+
+        pro = (Profile)getIntent().getSerializableExtra("Profile");
+
+        if(!pro.profile.equals("Custom")){
+
+            parameters.add(pro.TerrainChoosen);
+            parameters.add(pro.TimeSelected);
+            parameters.add(pro.DenivelationSelected);
+
+            Evaluate(SingletonDatabase.getInstance().bikeRoads, SingletonDatabase.getInstance().ptsInterest);
+        }
 
         setContentView(R.layout.activity_search);
     }
