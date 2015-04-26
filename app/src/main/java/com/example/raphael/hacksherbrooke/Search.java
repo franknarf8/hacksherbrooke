@@ -2,9 +2,6 @@ package com.example.raphael.hacksherbrooke;
 
 import android.content.Intent;
 import android.content.res.AssetManager;
-import android.os.Debug;
-import android.util.Log;
-import android.provider.MediaStore;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -25,7 +22,6 @@ import com.example.raphael.hacksherbrooke.parsers.SingletonDatabase;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.io.Serializable;
 import java.util.*;
 
 import static java.lang.Math.abs;
@@ -136,9 +132,7 @@ public class Search extends ActionBarActivity {
 
     public void Evaluate(List<BikeRoad> bikeRoadsArray, List<PointOfInterest> points){
         possiblePaths = new ArrayList<>();
-        for(int i = 0; i< bikeRoadsArray.size();i++) {
-
-            BikeRoad path = bikeRoadsArray.get(i);
+        for (BikeRoad path : bikeRoadsArray) {
 
             path.denivelation = findDenivelation(path);
 
@@ -146,7 +140,6 @@ public class Search extends ActionBarActivity {
             if (parameters.get(0).equals("Paved") && !path.pavement.equals("Asphalte")) {
                 continue;
             }
-
             possiblePaths.add(path);
         }
 
@@ -160,6 +153,7 @@ public class Search extends ActionBarActivity {
         if(parameters.get(1).equals("Whole afternoon"))
             multiplier = 0;
 
+        Collections.sort(possiblePaths, new RoadElevationComparator());
         int step = possiblePaths.size()/4;
         possiblePaths = new ArrayList<>(possiblePaths.subList(multiplier * step, multiplier * step + step));
         Intent nextMove = new Intent(this, SingleRun.class);
