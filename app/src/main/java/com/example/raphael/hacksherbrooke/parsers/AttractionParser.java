@@ -10,7 +10,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FoodParser implements PointOfInterestParser {
+public class AttractionParser implements PointOfInterestParser {
 
     @Override
     public List<PointOfInterest> getPointOfInterest(InputStream stream) {
@@ -28,6 +28,7 @@ public class FoodParser implements PointOfInterestParser {
             {
                 JSONObject obj = array.getJSONObject(i);
                 PointOfInterest poi = new PointOfInterest();
+
                 poi.adresse = obj.getString("NumeroCivique") + " "
                         + obj.getString("Rue") + " "
                         + obj.getString("Ville") + " "
@@ -38,11 +39,18 @@ public class FoodParser implements PointOfInterestParser {
                 poi.phone = obj.getString("NumeroTelephone");
                 poi.description = obj.getString("DescriptionCourte");
                 poi.image = obj.getString("FichierImage");
-                poi.type = PointOfInterest.Type.FOOD;
+                String lowerName = poi.name.toLowerCase();
+                String lowerDesc = poi.name.toLowerCase();
+                if (lowerName.contains("bar") || lowerName.contains("brasseri") || lowerName.contains("pub") || lowerDesc.contains("bar "))
+                    poi.type = PointOfInterest.Type.BAR;
+                else if (lowerName.contains("parc "))
+                    poi.type = PointOfInterest.Type.PARK;
+                else if (lowerDesc.contains("boutique"))
+                    poi.type = PointOfInterest.Type.MAGASIN;
+                else
+                    poi.type = PointOfInterest.Type.UNKNOWN;
+
                 pois.add(poi);
-
-
-
             }
         } catch (Exception e){}
 
