@@ -218,7 +218,7 @@ public class Search extends ActionBarActivity {
         }
 
         Intent nextMove = new Intent(this, SingleRun.class);
-
+        nextMove.putExtra("Points", (ArrayList<PointOfInterest>) points);
         nextMove.putExtra("Coordinate", possiblePaths);
         startActivity(nextMove);
 

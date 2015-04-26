@@ -28,7 +28,6 @@
         <activity
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps" >
-
         </activity>
         <activity
             android:name=".MainActivity"
@@ -46,6 +45,10 @@
         <activity
             android:name=".SingleRun"
             android:label="@string/title_activity_single_run" >
+        </activity>
+        <activity
+            android:name=".SmallMap"
+            android:label="@string/title_activity_small_map" >
         </activity>
     </application>
 
