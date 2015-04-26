@@ -20,17 +20,6 @@ public class MapsActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
         setUpMapIfNeeded();
-
-        //Load datasets
-        SingletonDatabase instance = SingletonDatabase.getInstance();
-        try {
-            AssetManager assetManager = getAssets();
-            instance.ptsInterest = new FoodParser().getPointOfInterest(assetManager.open("restaurants.json"));
-            instance.bikeRoads = new BikeRoadParser().getRoads(assetManager.open("pistecyclable.csv"));
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 
     @Override

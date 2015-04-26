@@ -2,19 +2,29 @@ package com.example.raphael.hacksherbrooke;
 
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.util.Log;
 
+import com.example.raphael.hacksherbrooke.parsers.BikeRoad;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.model.PolylineOptions;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class SingleRun extends FragmentActivity {
 
     private GoogleMap mMap; // Might be null if Google Play services APK is not available.
+    private List<BikeRoad> paths;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        paths = (List< BikeRoad>)getIntent().getSerializableExtra("Coordinate");
+
         setContentView(R.layout.activity_single_run);
         setUpMapIfNeeded();
     }
@@ -44,7 +54,7 @@ public class SingleRun extends FragmentActivity {
         // Do a null check to confirm that we have not already instantiated the map.
         if (mMap == null) {
             // Try to obtain the map from the SupportMapFragment.
-            mMap = ((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map))
+            mMap = ((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.smallMap))
                     .getMap();
             // Check if we were successful in obtaining the map.
             if (mMap != null) {
@@ -60,6 +70,29 @@ public class SingleRun extends FragmentActivity {
      * This should only be called once and when we are sure that {@link #mMap} is not null.
      */
     private void setUpMap() {
+
+        ArrayList<PolylineOptions> line = new ArrayList<>();
+
+        for(int i = 0 ; i< paths.size(); i++){
+
+            PolylineOptions temp = new PolylineOptions();
+
+            for(int k = 0 ; k < paths.get(i).geometry.size();k++){
+
+                temp.add(new LatLng(paths.get(i).geometry.get(k).longitude, paths.get(i).geometry.get(k).latitude));
+
+            }
+
+            line.add(temp);
+        }
+
+        for(int l = 0 ; l< line.size(); l++){
+
+            mMap.addPolyline(line.get(l));
+
+        }
+
+
         mMap.addMarker(new MarkerOptions().position(new LatLng(0, 0)).title("Marker"));
     }
 }

@@ -313,7 +313,8 @@
         android:layout_alignRight="@+id/checkBox8"
         android:layout_alignEnd="@+id/checkBox8"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:onClick="ButtonOnButtonClick" />
 
 
 </RelativeLayout>
