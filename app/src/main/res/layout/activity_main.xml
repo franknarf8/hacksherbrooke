@@ -13,7 +13,8 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:src="@drawable/couple" />
+        android:src="@drawable/couple"
+        android:onClick="OnCoupleView" />
 
     <ImageButton
         android:layout_width="wrap_content"
